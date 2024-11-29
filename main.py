@@ -7,7 +7,6 @@ spark = SparkSession.builder.appName("PySpark Data Analysis").getOrCreate()
 # ANSI escape codes для кольорів
 MAGENTA = "\033[35m"
 CYAN = "\033[36m"
-YELLOW = "\033[33m"
 
 def load_dataset(spark, path):
     return spark.read.csv(path, header=True, inferSchema=True)
